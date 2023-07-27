@@ -30,7 +30,7 @@ function App() {
         <input
           className="app__input"
           type="text"
-          placeholder="enter ingridient"
+          placeholder="Enter ingredient"
           autoComplete="Off"
           value={query}
           onChange={(e) => setquery(e.target.value)}
@@ -39,10 +39,10 @@ function App() {
       </form>
 
       <div className="app__recipes">
-        {recipes && recipes.length &&
+        {recipes && recipes.length ?
           recipes.map((recipe, index) => {
             return <RecipeTile key={index} index={index} recipe={recipe} />;
-          })}
+          }): null}
       </div>
     </div>
   );
