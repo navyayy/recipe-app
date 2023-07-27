@@ -39,7 +39,7 @@ function App() {
       </form>
 
       <div className="app__recipes">
-        {recipes.length &&
+        {recipes && recipes.length &&
           recipes.map((recipe, index) => {
             return <RecipeTile key={index} index={index} recipe={recipe} />;
           })}
